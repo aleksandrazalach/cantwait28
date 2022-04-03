@@ -14,7 +14,7 @@ class HomeCubit extends Cubit<HomeState> {
   StreamSubscription? _streamSubscription;
 
   Future<void> start() async {
-    _streamSubscription = _itemsRepository.getItemStream().listen(
+    _streamSubscription = _itemsRepository.getItemsStream().listen(
       (items) {
         emit(HomeState(items: items));
       },
